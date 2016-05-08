@@ -3,12 +3,12 @@ section.articles#articles
 
     .col-50
       .article-wrap
-        {% for post in site.posts limit: 12 %}
+        //{% for post in site.posts limit: 12 %}
         a(href="{{post.url}}" style="background-image: url({{post.cover}})").article-thumb
           .article-meta
             .name {{post.title}}
             .date {{post.date | date: "%b %d, %Y"}}
-        {% endfor %}
+        //{% endfor %}
         
 
 

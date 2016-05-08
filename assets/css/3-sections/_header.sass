@@ -1,61 +1,39 @@
-.home-wrap
+.header-wrap
+  
   header
-    width: 135px
-    background: white
-    padding: 30px 0
-
-    .header-position
-      position: fixed
-      top: 30px
-      left: 0
-      bottom: 30px
-      width: 135px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-
-    a
-      color: #999
-
-      &:hover, &:active
-        color: #666
-
+    position: fixed
+    display: flex
+    background: honeydew
+    left: 0
+    right: 60px
+    top: 0
+    height: auto
+    flex-direction: column
 
     .logo
-      +hide-text
-      max-width: 135px
-      background:
-        image: url(/assets/img/logo-tn.svg)
-        repeat: no-repeat
-        position: center
-        size: contain
-        //color: pink
-      height: 80px
-      padding: 0
       margin: 0
+      padding: 0
+      color: transparent
+      align-self: center
+      background:
+        image: url(/assets/img/logo-gu.png)
+        repeat: no-repeat
+        position: center center
+        size: contain
 
-
-    // Desktop Nav
-    .site-nav
+    nav.site-nav
+      margin: 0 10vw
       ul
+        margin-top: 0 
+        margin-bottom: 0 
+        display: flex
+        flex-direction: row
+        justify-content: space-around
         list-style: none
-        margin: 20px 0
-        padding: 0 20px 0 0
-        text-align: right
 
-      li
-        margin-bottom: 10px
-
-        &:last-child
-          margin-bottom: 0
-
-    .email-link
-      display: block
-      text-align: right
-      padding-right: 20px
-
-
-    // Mobile Toggle
+        
+        
+    // Mobile Toggle {{{
     .mobile-nav-toggle
       display: none
       width: 50px
@@ -68,15 +46,12 @@
       &:selection
         background: transparent
 
-      &:-moz-selection
-        background: transparent
-
       span,
       span:before,
       span:after
         content: ""
         display: block
-        height: 2px
+        height: 4px
         width: 100%
         background: #333
         position: relative
@@ -87,78 +62,19 @@
         top: 15px
 
       span:after
-        top: -17px
+        top: -19px
 
-      &.is-open span
+      &:hover span
         background: transparent
 
-      &.is-open span:before,
-      &.is-open span:after
+      &:hover span:before,
+      &:hover span:after
         transform-origin: center
         transform: rotate(45deg)
         top: 0
 
-      &.is-open span:before
+      &:hover span:before
         transform: rotate(-45deg)
+    // }}}
 
 
-  // Mobile Nav
-  .mobile-nav
-    display: none
-    position: absolute
-    width: 100%
-    background: white
-    padding: 30px 0 20px
-    transform: translateY(-100%)
-    transition: all 0.3s ease-in-out
-
-    a
-      color: #999
-
-      &:hover, &:active
-        color: #666
-
-
-    ul
-      list-style: none
-      margin: 0
-      padding: 0
-
-    li
-      text-align: center
-      margin-bottom: 10px
-
-
-
-
-
-
-
-@media (max-width: 775px)
-  .home-wrap
-    header
-      width: auto
-      padding: 20px 0
-
-      .header-position
-        width: auto
-        position: relative
-        top: auto
-        bottom: auto
-        left: auto
-        flex-direction: row
-        align-items: center
-
-      .site-nav,
-      .email-link
-        display: none
-
-      .logo
-        height: 45px
-
-      .mobile-nav-toggle
-        display: flex
-
-    .mobile-nav.is-open
-      display: block
-      transform: translateY(0%)

@@ -8,14 +8,11 @@ mixin nav-content()
     li: a(href="#testimonials") Отзывы
     li: a(href="#contact") Контакты
 
-.mobile-nav
-  +nav-content()
-
-header
-  .header-position
-    h1.logo Гармония Уюта
+.header-wrap
+    header
+        h3.logo Гармония Уюта
     
-    nav.site-nav
-      +nav-content()
+        nav.site-nav
+          +nav-content()
     
-    .mobile-nav-toggle: span
+        .mobile-nav-toggle: span
